@@ -13,8 +13,23 @@
 
 
 
--- We support three types of users:
+-- We support three types of users :
 
       1.Admin:    Manages the platform by verifying Vendor and vehicle and ensures everything runs smoothly.
       2.Vendor:   Can register, login, and list vehicles for rent or sale.
       3.User:     Can register, login, and browse available vehicles for renting or buying.
+
+
+
+-- Periods :
+
+      Start Date : 24th June 2024
+      End Date : TBA
+
+
+-- Progress : 
+
+            - Backend completed on 19th July 2024
+            - React learning started
+
+            
