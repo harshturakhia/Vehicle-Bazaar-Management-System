@@ -29,7 +29,7 @@
 
 -- Progress : 
 
-            - Backend completed on 19th July 2024
-            - React learning started
+     - Backend completed on 19th July 2024
+     - React learning started
 
             
