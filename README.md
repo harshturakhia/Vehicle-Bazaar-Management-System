@@ -24,12 +24,5 @@
 -- Periods :
 
       Start Date : 24th June 2024
-      End Date : TBA
+      End Date : 30st Aug 2024
 
-
--- Progress : 
-
-     - Backend completed on 19th July 2024
-     - React learning started
-
-            
