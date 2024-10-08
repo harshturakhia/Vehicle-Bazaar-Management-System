@@ -1,0 +1,3 @@
+-> DTO is meant for operations and data transferring however models meant for data persistence.
+
+-> Think about DTO as a contract that you use to treat with others using this contract specifications.And the contract specifications are the defined fields inside it

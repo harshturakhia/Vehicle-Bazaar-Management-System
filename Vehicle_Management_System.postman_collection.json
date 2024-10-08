@@ -1,0 +1,482 @@
+{
+	"info": {
+		"_postman_id": "3c790919-9037-496e-8153-965436568f51",
+		"name": "Vehicle_Management_System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34820563"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "ALL USERS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9898/api/getAlluser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"getAlluser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTER USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Testing\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"age\": \"30\",\r\n    \"gender\": \"male\",\r\n    \"contact\" : \"8866103895\",\r\n    \"address\" : \"007\",\r\n    \"role\" : \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9898/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"vendor@gmail.com\",\r\n    \"password\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9898/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET USER",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2N2VhNTBiZGUxMmYzNGNlYWVjNzRmNSIsImVtYWlsIjoiam9obkBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE5ODI0ODc1LCJleHAiOjE3MTk4MjU0NzV9.cBUdDm09j-tm4dlz4W77oVzJ8ixXl8UpJnPuthi1tAg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9898/api/getSingleUser/6682a07f8517090d41e5d9cd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"getSingleUser",
+								"6682a07f8517090d41e5d9cd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VERIFY USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isVerified\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9898/verifyVendor/667e9a7129647ffc098a2186",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"verifyVendor",
+								"667e9a7129647ffc098a2186"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Vendor One\",\r\n    \"email\" : \"vendor@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9898/api/updateUser/6682a07f8517090d41e5d9cd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"updateUser",
+								"6682a07f8517090d41e5d9cd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE USER",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9898/api/deleteUser/668278aca88cf6bd05757413",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"deleteUser",
+								"668278aca88cf6bd05757413"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SIGNOUT USER",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9898/signout/667ea50bde12f34ceaec74f5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"signout",
+								"667ea50bde12f34ceaec74f5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RESET PASSWORD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"admin@gmail.com\",\r\n    \"oldPassword\" : \"1234567\",\r\n    \"newPassword\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9898/api/resetPassword/6682404a3b7404d2b25142f8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"resetPassword",
+								"6682404a3b7404d2b25142f8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicle",
+			"item": [
+				{
+					"name": "REGISTER VEHICLE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2N2VhNTBiZGUxMmYzNGNlYWVjNzRmNSIsImVtYWlsIjoiam9obkBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE5ODI0ODc1LCJleHAiOjE3MTk4MjU0NzV9.cBUdDm09j-tm4dlz4W77oVzJ8ixXl8UpJnPuthi1tAg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Audi\",\r\n    \"brand\": \"Audi\",\r\n    \"yearOfRegistration\": \"2002\",\r\n    \"registrationDetails\": \"Jnd\",\r\n    \"choice\": \"sell\",\r\n    \"fuelType\": \"CNG\",\r\n    \"transmission\": \"gas\",\r\n    \"kmDriven\": 786,\r\n    \"vehicleType\": \"Sedan\",\r\n    \"ownerNo\": 1,\r\n    \"description\": \"Testing #4\",\r\n    \"availableLocation\": \"Jnd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9898/api/registerVehicle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"registerVehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST VERIFY VEHICLE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vehicleId\" : \"668387cd15fb59232e0f9769\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9898/api/isVerified",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"isVerified"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL VEHICLES BY FILTERING",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9898/api/getAllVehicles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"getAllVehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET SINGLE VEHICLE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9898/api/getVehicleDetails/668380c8522c0ed9020fd517",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"getVehicleDetails",
+								"668380c8522c0ed9020fd517"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE VEHICLE BY USERID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9898/api/deleteVehicle/66827b27126cf07aefffc582",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"deleteVehicle",
+								"66827b27126cf07aefffc582"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE VEHICLE DETAILS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"brand\" : \"Hyundai New Updated\",\r\n    \"name\" : \"Hyundai New Updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9898/api/updateVehicle/668384bbce6df840b3d63556",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"updateVehicle",
+								"668384bbce6df840b3d63556"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET VEHICLES BY VENDOR ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9898/api/getProductsById",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"getProductsById"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UDPATE VEHICLE IMAGE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/pct119/Downloads/pp.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9898/api/updateImage/668384bbce6df840b3d63556",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"updateImage",
+								"668384bbce6df840b3d63556"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,18 @@
+-> A queue instance can normally have 3 main different roles: 
+    A job producer, a job consumer or/and an events listener.
+
+-> const myFirstQueue = new Bull('my-first-queue');
+
+-> An important aspect is that producers can add jobs to a queue even if there are no consumers available at that moment.
+    queues provide asynchronous communication, which is one of the features that makes them so powerful.
+
+-> Conversely, you can have one or more workers consuming jobs from the queue, which will consume the jobs in a given order: FIFO (the default), LIFO or according to priorities.
+
+-> .add() - This method is responsible for creating a new job and adding it to the queue;
+   .process() - It is the function responsible for processing the jobs we have in the queue
+
+-> const job = await myFirstQueue.add({
+    foo: 'bar'
+    });
+
+-> 

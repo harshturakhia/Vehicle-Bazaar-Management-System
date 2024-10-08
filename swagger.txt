@@ -1,0 +1,41 @@
+const swaggerAutogen = require("swagger-autogen")();
+
+const doc = {
+    info: {
+        title: "My API",
+        description: "Description",
+    },
+    host: "localhost:9898",
+};
+
+const outputFile = "./swagger-output.json";
+const routes = ["./routes/userRoutes.js", "./routes/vehicleRoutes.js"];
+
+/* NOTE: If you are using the express Router, you must pass in the 'routes' only the 
+root file where the route starts, such as index.js, app.js, routes.js, etc ... */
+
+swaggerAutogen(outputFile, routes, doc);
+
+// const swaggerAutogen = require("swagger-autogen")();
+
+// const doc = {
+//     info: {
+//         title: "My API",
+//         description: "Description",
+//     },
+//     host: "localhost:3000/api",
+// };
+
+// const outputFile = "./swagger-output.json";
+// const routes = [
+//     "./routes/userRoutes.js",
+//     "./routes/vehicleRoutes.js",
+//     "./routes/cartRoutes.js",
+// ];
+
+// swaggerAutogen(outputFile, routes, doc).then(() => {
+//     const app = require('./index.js'); // Import the app
+//     app.listen(3000, () => {
+//         console.log("Server is running on port 3000");
+//     });
+// });
